@@ -4,6 +4,7 @@ import webbrowser
 from main import extract_lang_long
 import csv
 
+#zoho_auth_url = "https://accounts.zoho.com/oauth/v2/auth?scope={scope}&client_id=1000.9JJW9BUVNQCHGM521QXVZXBEPF9R4J&response_type=code&access_type={offline or online}&redirect_uri={redirect_uri}&prompt=consent"
 
 #places = {'cities': ["10915 Jasmine Crest Lane", "1600 Amphitheatre Parkway, Mountain View, CA"],
 #          'latitude': [32.9165762, 37.4223878],

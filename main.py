@@ -5,8 +5,8 @@ import pandas as pd
 with open('API_credentials') as f:
     api_key = f.readline()
 
-df = pd.read_excel('Jolla 5 Primary Parcels.xlsx')
-address = df['MAIL_ADDRE']
+df = pd.read_csv('places.csv')
+address = df['cities']
 #print(address)
 
 #"1600 Amphitheatre Parkway, Mountain View, CA"
@@ -16,6 +16,7 @@ def extract_lang_long(address_or_postalcode, data_type  = 'json'):
     parameters = {"address": address_or_postalcode, "key": api_key}
     url_parameters = urlencode(parameters)
     url = f"{endpoint}?{url_parameters}"
+    print(url_parameters)
     r = requests.get(url)
     if r.status_code not in range(200, 299):
         return {}
